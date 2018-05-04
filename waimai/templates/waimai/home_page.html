@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prince Benson Waimai</title>
+</head>
+<body>
+	<h1>Prince Benson Fusion Restaurant</h1>
+	<p>Tasty Treats To Your Door</p>
+
+	<h2>Here are all our items!</h2>
+
+	<!--item 1-->
+	<p>Great Steak: 180RMB</p>
+	<img src="http://oxygenfit.com.au/wp-content/uploads/2012/01/steak.jpg">
+	<br>
+
+	<!--item 2-->
+	<p>Great Pasta: 150RMB</p>
+	<img src="http://tse2.mm.bing.net/th?id=OIP.ZHi8LOr1HhmO9YENMaugqAHaE7&pid=Api">
+
+	<!--item 3-->
+	<p>Great chips: 50RMB</p>
+	<img src="http://wallpapersdsc.net/wp-content/uploads/2016/09/Potato-chips-HD-Desktop.jpg">
+
+	<!--Order Form-->
+	<h2>Place your order</h2>
+	<form action="{% url'waimai':home_page' %}"method= "POST">
+	      {% csrf_token %}
+	      <input type="text" name="item" placeholder="Please Type Which Item You Want"><br>
+	      <textarea name="address" placeholder="Please Type Your Adress"></textarea><br>
+	      <input type="submit" value="Place Your Order>
+	</form>
+
+	<!--Show Order-->
+	<h1>Your Order:</h1>
+	<p>Item Ordered:{{address}}</p>
+
+</body>
+</html>>
